@@ -1,0 +1,100 @@
+<div class="mb-3">
+    <label class="form-label" for="first_name">First name <span style='color:red'>(required)</span></label>
+    <input class="form-control" type="text" id="first_name" name="profile[first_name]" required autofocus>
+    <div class="valid-feedback">
+        Looks good!
+    </div>
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for="last_name">Last name <span style='color:red'>(required)</span></label>
+    <input class="form-control" type="text" id="last_name" name="profile[last_name]" required>
+    <div class="valid-feedback">
+        Looks good!
+    </div>
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for="dob-year">Date of Birth: Year</label>
+    <select class="form-control" id="dob-year" name="profile[dob][year]">
+        <% for (let year = 1900; year <= 2100; year++) { %>
+            <option value='<%= year %>'><%= year %></option>
+        <% } %>
+    </select>
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for="dob-year">Date of Birth: Month</label>
+    <select class="form-control" id="dob-year" name="profile[dob][month]">
+        <% for (let month = 1; month <= 12; month++) { %>
+            <option value='<%= month %>'><%= month %></option>
+        <% } %>
+    </select>
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for="dob-year">Date of Birth: Day</label>
+    <select class="form-control" id="dob-year" name="profile[dob][day]">
+        <% for (let day = 1; day <= 31; day++) { %>
+            <option value='<%= day %>'><%= day %></option>
+        <% } %>
+    </select>
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for="image">Upload a picture as your thumbnail...</label>
+    <input class="form-control" type="file" id="image" name="image">
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for="hometown[country]">Hometown: Country</label>
+    <input class="form-control" type="text" id="hometown[country]" name="profile[hometown][country]">
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for="hometown[state]">Hometown: State/province</label>
+    <input class="form-control" type="text" id="hometown[state]" name="profile[hometown][state]">
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for="hometown[city]">Hometown: city</label>
+    <input class="form-control" type="text" id="hometown[city]" name="profile[hometown][city]">
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for="present[country]">Present location: Country</label>
+    <input class="form-control" type="text" id="present[country]" name="profile[present][country]">
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for="present[state]">Present location: State/province</label>
+    <input class="form-control" type="text" id="present[state]" name="profile[present][state]">
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for="present[city]">Present location: city</label>
+    <input class="form-control" type="text" id="present[city]" name="profile[present][city]">
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for="job[company]">Present company/university</label>
+    <input class="form-control" type="text" id="job[company]" name="profile[job][company]">
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for="job[position]">Present occupation</label>
+    <input class="form-control" type="text" id="job[position]" name="profile[job][position]">
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for="ismarried">Marriage status</label>
+    <select class="form-select" id="ismarried" name="profile[ismarried]">
+        <option value='1'>Married</option>
+        <option value='0'>Not Married</option>
+    </select>
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for="phone">Phone number</label>
+    <input class="form-control" type="text" id="phone" name="profile[phone]">
+</div>

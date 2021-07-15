@@ -1,0 +1,18 @@
+<% layout('layouts/boilerplate') %>
+<div class="container justify-content-center align-items-center mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+            <div class="card shadow">
+                <!-- <img src="https://ae01.alicdn.com/kf/H73257a537f884e73b49dd4c10a5f389a1/^Game-Genshin-Impact-Keqing-Cosplay-Costume-Genshin-Impact-Cosplay-KEQING-Costume-Dress-Uniforms-Women-Halloween-Full.jpg" 
+                    alt="" class="card-img-top"> -->
+                <div class="card-body">
+                    <h5 class="card-title">Create Alumni Profile</h5>
+                    <form action="/alumni/<%= user.username %>/createProfile" method="POST" class="needs-validation" enctype="multipart/form-data" novalidate>
+                        <%- include('partials/profilePartial') %>
+                        <button class="btn btn-success btn-block">Create Alumni Profile</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

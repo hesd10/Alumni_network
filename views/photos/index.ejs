@@ -1,0 +1,27 @@
+<% layout('layouts/boilerplate') %>
+<h1>Photo Collections</h1>
+<div>
+    <a href="/photos/new" class="btn btn-success mb-3">Add a new photo</a>
+</div>
+<% for (let photo of photos) { %>
+   <div class="card mb-3">
+       <div class="row">
+           <div class="col-md-4">
+               <% if(photo.image) { %>
+                   <img class="img-fluid" alt="" src="<%= photo.image.thumbnailGeneral %>">
+               <% } else { %>
+                   <img class="img-fluid" alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png">
+               <% } %>
+           </div>
+           <div class="col-md-8">
+               <div class="card-body">
+                   <h5 class="card-title"><%= photo.description %></h5>
+                   <p class="card-text">
+                       <small class="text-muted">Uploaded by <%= photo.uploader.first_name%> <%= photo.uploader.last_name%></small>
+                   </p>
+                   <a href="/photos/<%= photo.id %>" class="btn btn-primary">View this photo</a>
+               </div>
+           </div>
+       </div>
+   </div>
+<% } %>

@@ -1,0 +1,32 @@
+<% layout('layouts/boilerplate') %>
+<div class="container justify-content-center align-items-center mt-5">
+    <div class="row">
+        <div class="col-xl-6 offset-xl-3">
+            <div class="card shadow">
+                <!-- <img src="https://ae01.alicdn.com/kf/H73257a537f884e73b49dd4c10a5f389a1/^Game-Genshin-Impact-Keqing-Cosplay-Costume-Genshin-Impact-Cosplay-KEQING-Costume-Dress-Uniforms-Women-Halloween-Full.jpg" 
+                    alt="" class="card-img-top"> -->
+                <div class="card-body">
+                    <h5 class="card-title">Alumni Profile</h5>
+                    <% if(userPopulated.alumni.image) {%>
+                        <img src="<%= userPopulated.alumni.image.thumbnail %>" alt="">
+                    <% } else { %>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png" alt="">
+                    <% } %>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Name: <%= userPopulated.alumni.last_name + ', ' + userPopulated.alumni.first_name %></li>
+                        <li class="list-group-item">Date of birth (YYYY-MM-DD): <%= userPopulated.alumni.dobISO %></li>
+                        <li class="list-group-item">Hometown: <%= userPopulated.alumni.hometown.country + ', ' + userPopulated.alumni.hometown.state + ', ' + userPopulated.alumni.hometown.city %></li>
+                        <li class="list-group-item">Present location: <%= userPopulated.alumni.present_location.country + ', ' + userPopulated.alumni.present_location.state + ', ' + userPopulated.alumni.present_location.city %></li>
+                        <li class="list-group-item">Present company/university: <%= userPopulated.alumni.present_job.company %> </li>
+                        <li class="list-group-item">Present occupation: <%= userPopulated.alumni.present_job.position %> </li>
+                        <li class="list-group-item">Marriage status: <%= userPopulated.alumni.is_married? 'Married': 'Not married' %> </li>
+                        <li class="list-group-item">Phone number: <%= userPopulated.alumni.phone %> </li>
+                        <li class="list-group-item">Email: <%= userPopulated.email %> </li>
+                    </ul>
+                    <a href="/alumni/<%= userPopulated.username %>/updateProfile" class="btn btn-primary">Edit Profile</a>
+                    <a href="/alumni/<%= userPopulated.username %>/changePassword" class="btn btn-danger">Change Password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

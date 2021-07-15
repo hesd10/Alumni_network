@@ -1,0 +1,49 @@
+<% layout('layouts/boilerplate') %>
+<div class="container justify-content-center align-items-center mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+            <div class="card shadow">
+                <!-- <img src="https://ae01.alicdn.com/kf/H73257a537f884e73b49dd4c10a5f389a1/^Game-Genshin-Impact-Keqing-Cosplay-Costume-Genshin-Impact-Cosplay-KEQING-Costume-Dress-Uniforms-Women-Halloween-Full.jpg" 
+                    alt="" class="card-img-top"> -->
+                <div class="card-body">
+                    <h5 class="card-title">Register as Alumni</h5>
+                    <form action="/register" method="POST" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label" for="username">Username</label>
+                            <input class="form-control" type="text" id="username" name="username" required autofocus>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+            
+                        <div class="mb-3">
+                            <label class="form-label" for="email">Email</label>
+                            <input class="form-control" type="email" id="email" name="email" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+            
+                        <div class="mb-3">
+                            <label class="form-label" for="password">Password</label>
+                            <input class="form-control" type="password" id="password" name="password" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+            
+                        <div class="mb-3">
+                            <label class="form-label" for="verify_code">Verification code</label>
+                            <input class="form-control" type="text" id="verify_code" name="verify_code" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+            
+                        <button class="btn btn-success btn-block">Register as Alumni</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

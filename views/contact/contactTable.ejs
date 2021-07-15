@@ -1,0 +1,38 @@
+<% layout('layouts/boilerplate') %>
+<div class="container justify-content-center align-items-center mt-5">
+    <div class="row">
+        <div>
+            <h2 class="text-center">Contact Table</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Date of birth</th>
+                        <th scope="col">Hometown</th>
+                        <th scope="col">Present location</th>
+                        <th scope="col">Present company/university</th>
+                        <th scope="col">Present occupation</th>
+                        <th scope="col">Marriage status</th>
+                        <th scope="col">Phone number</th>
+                        <th scope="col">Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (let user of usersPopulated ) { %>
+                        <tr>
+                            <th scope="row"> <%= user.alumni.last_name + ', ' + user.alumni.first_name %> </th>
+                            <td> <%= user.alumni.dobISO %> </td>
+                            <td> <%= user.alumni.hometown.country + ', ' + user.alumni.hometown.state + ', ' + user.alumni.hometown.city %> </td>
+                            <td> <%= user.alumni.present_location.country + ', ' + user.alumni.present_location.state + ', ' + user.alumni.present_location.city %> </td>
+                            <td> <%= user.alumni.present_job.company %> </td>
+                            <td> <%= user.alumni.present_job.position %> </td>
+                            <td> <%= user.alumni.is_married? 'Married': 'Not married' %> </td>
+                            <td> <%= user.alumni.phone %> </td>
+                            <td> <%= user.email %> </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

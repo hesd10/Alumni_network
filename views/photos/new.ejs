@@ -1,0 +1,36 @@
+<% layout('layouts/boilerplate') %>
+<div class="container justify-content-center align-items-center mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Update new photo</h5>
+                    <form action="/photos" method="POST" class="needs-validation" enctype="multipart/form-data" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label" for="image">Upload a photo...</label>
+                            <input class="form-control" type="file" id="image" name="image" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label" for="description">Description: </span></label>
+                            <input class="form-control" type="text" id="description" name="photo[description]" autofocus>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="accessibility">Accessibility: </label>
+                            <select class="form-select" id="accessibility" name="photo[accessibility]">
+                                <option value='OnlyToAlumni' selected>Accessible only for alumni</option>
+                                <option value='Global'>Accessible for everyone</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-success btn-block">Upload Photo</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
